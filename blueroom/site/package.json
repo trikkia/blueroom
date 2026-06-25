@@ -12,7 +12,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@ruffle-rs/ruffle": "^0.3.0",
     "astro": "^7.0.3"
   }
 }
