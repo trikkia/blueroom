@@ -91,10 +91,10 @@ def download(wb_url: str, dest: Path, strip_toolbar: bool = True) -> bool:
         if strip_toolbar and dest.suffix.lower() in (".html", ".htm", ""):
             data = strip_wayback_toolbar(data)
         dest.write_bytes(data)
-        print(f"  [ok]   {dest.relative_to(dest.parents[3])}")
+        print(f"  [ok]   {dest.name}")
         return True
     except Exception as e:
-        print(f"  [ERR]  {wb_url} → {e}")
+        print(f"  [ERR]  {wb_url} | {e}")
         return False
 
 
@@ -110,7 +110,7 @@ def scrape(site: str, domain: str):
     # save raw CDX index for reference
     index_file = out_dir / "_cdx_index.json"
     index_file.write_text(json.dumps(rows, indent=2, ensure_ascii=False))
-    print(f"[CDX] index saved → {index_file}")
+    print(f"[CDX] index saved -> {index_file}")
 
     # separate HTML pages from assets
     html_mimes = {"text/html", "application/xhtml+xml"}
@@ -145,7 +145,7 @@ def scrape(site: str, domain: str):
     if failed:
         fail_log = out_dir / "_failed.json"
         fail_log.write_text(json.dumps(failed, indent=2, ensure_ascii=False))
-        print(f"{len(failed)} failed → {fail_log}")
+        print(f"{len(failed)} failed -> {fail_log}")
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
   "name": "trikkia",
   "private": true,
   "scripts": {
-    "build": "cd blue-room/site && npm install && npm run build",
-    "dev": "cd blue-room/site && npm run dev"
+    "build": "cd blueroom/site && npm install && npm run build",
+    "dev": "cd blueroom/site && npm run dev"
   }
 }
