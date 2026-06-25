@@ -1,0 +1,154 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="::: Blueroom ::: Music : Art : Video : Home Page">
+
+<!--
+  Homepage of blue-room.it — April 2006 snapshot.
+  Original structure: 4-row × 3-column table, 824px wide, centered.
+  Each nav cell contains a Flash animation (served via Ruffle) + a label image.
+  Bottom-right cell: photo of the current month's programme (mesemarzo.jpg).
+
+  SWF → cell mapping (from original index.htm):
+    1bis.swf  → programma
+    1.swf     → archivio
+    99.swf    → about us
+    6.swf     → musica
+    7.swf     → video
+    8.swf     → art
+    3.swf     → gallery
+    4.swf     → contact
+    navigazionepiccola.swf → top-right nav bar (237×32)
+-->
+
+<table width="824" border="0" align="center" cellpadding="2" cellspacing="2">
+
+  <!-- row 1: logo / navigation bar -->
+  <tr align="center" valign="middle">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td align="right">
+      <embed src="/flash/navigazionepiccola.swf"
+             width="237" height="32"
+             type="application/x-shockwave-flash"
+             quality="high">
+    </td>
+  </tr>
+
+  <!-- row 2: programma | archivio | about us -->
+  <tr align="right" valign="middle">
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/1bis.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/programma/marzo/marzomusica.htm">
+        <img src="/html/image/menuhp/programma.jpg" width="120" height="30" border="0" alt="programma">
+      </a>
+    </td>
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/1.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/programma/archivio.htm">
+        <img src="/html/image/menuhp/archivio.jpg" width="120" height="30" border="0" alt="archivio">
+      </a>
+    </td>
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/1bis.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/aboutus.htm">
+        <img src="/html/image/menuhp/aboutus.jpg" width="120" height="30" border="0" alt="about us">
+      </a>
+    </td>
+  </tr>
+
+  <!-- row 3: musica | video | art -->
+  <tr align="right" valign="middle">
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/6.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/musica.htm">
+        <img src="/html/image/menuhp/musica.jpg" width="120" height="30" border="0" alt="musica">
+      </a>
+    </td>
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/7.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/video.htm">
+        <img src="/html/image/menuhp/video.jpg" width="120" height="30" border="0" alt="video">
+      </a>
+    </td>
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/8.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/art/3500cm.htm">
+        <img src="/html/image/menuhp/art.jpg" width="120" height="30" border="0" alt="art">
+      </a>
+    </td>
+  </tr>
+
+  <!-- row 4: gallery | contact | mese corrente (photo) -->
+  <tr align="right" valign="middle">
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/3.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/gallery/gallery.htm">
+        <img src="/html/image/menuhp/gallery.jpg" width="120" height="30" border="0" alt="gallery">
+      </a>
+    </td>
+    <td class="quadro">
+      <div class="flashhp">
+        <embed src="/flash/quadriflash/4.swf"
+               width="266" height="100"
+               type="application/x-shockwave-flash"
+               quality="high">
+      </div>
+      <br><br>
+      <a href="/html/contact.htm">
+        <img src="/html/image/menuhp/contact.jpg" width="120" height="30" border="0" alt="contact">
+      </a>
+    </td>
+    <!-- not Flash: this is the month's editorial photo, links to current programme -->
+    <td class="quadro" align="center">
+      <a href="/html/programma/marzo/marzomusica.htm">
+        <img src="/images/archivio/mesemarzo.jpg" width="266" height="177" border="0" alt="blueroom marzo">
+      </a>
+    </td>
+  </tr>
+
+</table>
+
+</Base>

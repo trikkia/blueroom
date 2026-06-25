@@ -1,0 +1,81 @@
+/*
+  Reconstruction of bl05.css — the original stylesheet of blue-room.it (2005-2006).
+  The scraped original will replace this once the download is complete.
+  Class names and values are derived from the HTML sources + visual screenshots.
+*/
+
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #2c2c2c;
+}
+
+a {
+  color: #4d71b2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* cell borders */
+.quadro {
+  border: 1px solid #b0c6e2;
+  padding: 4px;
+}
+
+/* 266×100 container for each Flash cell on homepage */
+.flashhp {
+  width: 266px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* --- text styles --- */
+.titbianco {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.txtgrigio {
+  color: #888888;
+  font-size: 11px;
+}
+
+.txtbianco {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+/* role labels (e.g. "resident", "image", "poster") */
+.creditpro {
+  color: #aaaaaa;
+  font-size: 10px;
+}
+
+/* artist names */
+.creditnomi {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+/* white links — used on dark blue backgrounds */
+a.white,
+.white a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a.white:hover,
+.white a:hover {
+  text-decoration: underline;
+}
+
+/* blue accent text */
+.sala,
+.data {
+  color: #4d71b2;
+}
