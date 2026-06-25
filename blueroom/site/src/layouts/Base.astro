@@ -12,11 +12,15 @@ const { title = '::: Blueroom ::: Music : Art : Video' } = Astro.props;
   <title>{title}</title>
   <link rel="icon" href="/images/button/logourl.gif" type="image/gif">
   <link rel="stylesheet" href="/css/bl05.css">
-  <!--
-    Ruffle: open-source Flash emulator in WebAssembly.
-    Intercepts <embed type="application/x-shockwave-flash"> automatically.
-    Self-hosted build in /ruffle/ so the site works fully offline.
-  -->
+  <link rel="preload" href="/ruffle/ruffle.js" as="script">
+  <script is:inline>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "hidden",
+      letterbox: "off"
+    };
+  </script>
   <script src="/ruffle/ruffle.js" is:inline></script>
 </head>
 <body>
